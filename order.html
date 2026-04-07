@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order | Elite Auto Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand-box">
+            <h2 class="logo">ELITE AUTO HUB</h2>
+            <p class="slogan-text">Driven by Excellence</p>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="cars.html">Inventory</a></li>
+            <li><a href="order.html" class="nav-btn">Order Now</a></li>
+        </ul>
+    </nav>
+
+    <section class="order-section">
+        <div class="order-container">
+            <h1 class="form-title">Secure Your <span class="gold-text">Dream Car</span></h1>
+            <p class="form-subtitle">Fill in your details and our team will contact you for final specifications.</p>
+
+            <form class="booking-form">
+                
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" placeholder="+92 300 0000000" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Car Model</label>
+                    <select required>
+                        <option value="">-- Choose a Car --</option>
+                        <option value="aventador">Aventador Spectre</option>
+                        <option value="titan">Titan G-Class</option>
+                        <option value="volt">Volt Matrix E</option>
+                        <option value="muscle">Dark Horse V8</option>
+                        <option value="ferrari">Ferrari Tributo</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Custom Specifications (Color, Rims, Interior etc.)</label>
+                    <textarea rows="5" placeholder="Describe your preferred modifications here..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-order-btn">Confirm My Interest</button>
+            </form>
+
+            <p class="success-msg">Success! Your request has been sent. Our team will call you soon.</p>
+        </div>
+    </section>
+
+</body>
+</html>

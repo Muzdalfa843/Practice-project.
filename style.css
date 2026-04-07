@@ -1,0 +1,547 @@
+/* --- Global Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #050505;
+    color: white;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.gold-text {
+    color: #D4AF37;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(0, 0, 0, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.brand-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.slogan-line {
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #888;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+}
+
+.nav-btn {
+    background: #D4AF37;
+    color: black !important;
+    padding: 8px 22px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1500') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.hero-btns {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btn-primary, .btn-secondary {
+    padding: 15px 35px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+
+.btn-primary {
+    background: #D4AF37;
+    color: black;
+}
+
+.btn-secondary {
+    border: 1px solid white;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: black;
+}
+
+/* --- Footer Section --- */
+.site-footer {
+    background: #000;
+    padding: 80px 8% 30px;
+    border-top: 2px solid #222;
+    margin-top: 50px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-column h3, 
+.footer-column h4 {
+    margin-bottom: 25px;
+    font-family: 'Playfair Display', serif;
+}
+
+.footer-desc {
+    color: #888;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #888;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #D4AF37;
+    padding-left: 5px;
+}
+
+.footer-column p {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #111;
+    font-size: 12px;
+    color: #444;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+/* --- Global Styles --- */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
+body { background-color: #050505; color: white; }
+.gold-text { color: #D4AF37; }
+
+/* --- Navbar (FLEXBOX use kiya gaya hai) --- */
+.navbar {
+    display: flex;              /* Items ko ek line mein lane ke liye */
+    justify-content: space-between; /* Logo left aur links right pe karne ke liye */
+    align-items: center;        /* Vertically center align karne ke liye */
+    padding: 20px 8%;
+    background: #000;
+    border-bottom: 1px solid #222;
+}
+.nav-links {
+    display: flex;              /* Links ko horizontal karne ke liye */
+    list-style: none;
+    gap: 25px;                  /* Links ke beech fasla */
+}
+.nav-links a { text-decoration: none; color: white; font-size: 14px; transition: 0.3s; }
+.nav-links a:hover { color: #D4AF37; }
+
+/* --- Inventory Grid (CSS GRID use kiya gaya hai) --- */
+.inventory-section { padding: 80px 8%; text-align: center; }
+
+.car-grid {
+    display: grid;              /* Grid system activate kiya */
+    /* auto-fit: screen ke hisab se cards adjust honge */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;                  /* Cards ke darmiyan gap */
+    margin-top: 50px;
+}
+
+/* --- Card Design --- */
+.car-card {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    overflow: hidden;           /* Taake image card se bahar na nikle */
+    position: relative;         /* Taake status tags card ke upar fix ho sakein */
+    transition: 0.4s;
+}
+.car-card:hover {
+    border-color: #D4AF37;      /* Hover pe gold border chamkega */
+    transform: translateY(-10px); /* Card thoda upar jump karega */
+}
+
+/* --- Sold Out Effect --- */
+.sold-out {
+    opacity: 0.5;               /* Thoda dhundla kar diya */
+    filter: grayscale(100%);     /* Black and white look */
+}
+
+/* --- Tags --- */
+.status-tag {
+    position: absolute;         /* Card ke upar tag chipkane ke liye */
+    top: 15px; left: 15px;
+    background: #D4AF37; color: black;
+    padding: 5px 12px; font-size: 11px; font-weight: bold;
+    border-radius: 4px; z-index: 2;
+}
+.sold { background: #ff4444; color: white; } /* Sold tag red hoga */
+
+.car-card img { width: 100%; height: 220px; object-fit: cover; }
+
+/* --- Specs (GRID use kiya specs ke liye) --- */
+.card-content { padding: 25px; text-align: left; }
+.price { color: #D4AF37; font-size: 20px; font-weight: bold; margin-bottom: 15px; }
+
+.specs-grid {
+    display: grid;              /* Specs ko 2 columns mein dikhane ke liye grid */
+    grid-template-columns: 1fr 1fr; 
+    gap: 10px;
+    font-size: 12px;
+    color: #aaa;
+    margin-bottom: 20px;
+}
+
+/* --- Button --- */
+.action-btn {
+    display: block;             /* Poori card width cover karne ke liye */
+    text-align: center;
+    background: #D4AF37;
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+.disabled { background: #333; color: #777; cursor: not-allowed; }
+/* --- Order Page Layout Styling --- */
+.order-section {
+    padding: 60px 8%;
+    display: flex;              /* Activate Flexbox */
+    justify-content: center;    /* Center the form horizontally */
+    align-items: center;        /* Center the form vertically */
+    min-height: 80vh;           /* Take full height of the screen */
+    background: #080808;        /* Dark premium background */
+}
+
+/* --- Container for the Form --- */
+.order-container {
+    background: #111;           /* Slightly lighter dark background */
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid #222;     /* Subtle border to define the shape */
+    width: 100%;
+    max-width: 600px;           /* Prevents the form from becoming too wide */
+    text-align: center;
+}
+
+.form-title { font-size: 2.2rem; margin-bottom: 10px; }
+.form-subtitle { color: #888; margin-bottom: 30px; font-size: 14px; }
+
+/* --- Form Alignment using Flex Column --- */
+.booking-form {
+    display: flex;
+    flex-direction: column;     /* Stack input fields one under another */
+    text-align: left;           /* Keep labels aligned to the left */
+}
+
+/* --- Spacing for each Input Group --- */
+.form-group { margin-bottom: 20px; }
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #D4AF37;             /* Golden labels for premium look */
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* --- Input Field Designs --- */
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #1a1a1a;        /* Dark inputs */
+    border: 1px solid #333;     /* Dark border */
+    color: white;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+/* --- Highlight input when clicked --- */
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #D4AF37;      /* Changes border to gold on click */
+    outline: none;
+}
+
+/* --- Submit Button Styling --- */
+.submit-order-btn {
+    background: #D4AF37;        /* Golden background */
+    color: black;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.4s;
+    margin-top: 10px;
+}
+
+/* --- Button Hover Effect --- */
+.submit-order-btn:hover {
+    background: white;          /* Changes to white on hover */
+    transform: scale(1.02);     /* Slightly grows for interactive feel */
+}
+
+/* --- Success Message Styling --- */
+.success-msg {
+    margin-top: 25px;
+    color: #28a745;             /* Green color for positive feedback */
+    font-weight: bold;
+    display: none;              /* Hidden until form is submitted */
+}
+/* --- Premium About Hero --- */
+.about-hero {
+    height: 60vh;
+    background: url('https://images.unsplash.com/photo-1562141989-c5c79ac8f576?w=1500') center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.about-hero-content { position: relative; z-index: 2; }
+.about-hero h1 { font-family: 'Playfair Display', serif; font-size: 4.5rem; margin-bottom: 10px; }
+.italic { font-style: italic; }
+
+/* --- History Section (Flexbox Layout) --- */
+.history-section { padding: 100px 8%; background: #050505; }
+.history-flex {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+/* Image box with a decorative gold frame */
+.history-img-box { flex: 1; position: relative; }
+.history-img-box img { width: 100%; border-radius: 5px; position: relative; z-index: 2; }
+.gold-frame {
+    position: absolute;
+    top: 20px; left: -20px;
+    width: 100%; height: 100%;
+    border: 3px solid #D4AF37;
+    z-index: 1;
+}
+
+/* Text area for History */
+.history-text { flex: 1.2; }
+.history-text h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 25px; }
+.history-text p { color: #aaa; margin-bottom: 20px; font-size: 1.1rem; line-height: 1.8; }
+
+/* Horizontal Stats Bar using Flexbox */
+.stats-row { display: flex; gap: 40px; margin-top: 40px; }
+.stat h3 { color: #D4AF37; font-size: 2rem; margin-bottom: 5px; }
+.stat p { font-size: 12px; text-transform: uppercase; letter-spacing: 2px; color: #666; }
+
+/* --- Values Section (CSS Grid Layout) --- */
+.values-section { padding: 100px 8%; background: #0a0a0a; text-align: center; }
+.section-title { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 60px; }
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 30px;
+}
+
+/* Individual Value Cards */
+.value-card {
+    padding: 40px;
+    background: #111;
+    border: 1px solid #222;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+.value-card:hover { border-color: #D4AF37; transform: translateY(-10px); }
+.value-card h3 { color: #D4AF37; margin-bottom: 15px; font-size: 1.5rem; }
+.value-card p { color: #888; line-height: 1.6; }
+
+/* Mobile View adjustments */
+@media (max-width: 900px) {
+    .history-flex { flex-direction: column; text-align: center; }
+    .stats-row { justify-content: center; }
+    .gold-frame { display: none; }
+}
+/* --- Feedback Page Styles --- */
+
+/* Hero Header for Feedback */
+.feedback-hero {
+    text-align: center;
+    padding: 80px 8% 40px;
+    background: #080808;
+}
+.feedback-hero h1 { font-family: 'Playfair Display', serif; font-size: 3rem; }
+
+/* Main layout using Flexbox */
+.feedback-container {
+    display: flex;
+    gap: 50px;
+    padding: 60px 8%;
+    background: #050505;
+    flex-wrap: wrap; /* Helps with mobile responsiveness */
+}
+
+/* Reviews List Section (Left Side) */
+.reviews-list { flex: 1.5; min-width: 350px; }
+.reviews-list h2 { margin-bottom: 30px; font-family: 'Playfair Display', serif; }
+
+/* Grid for the cards inside reviews list */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack reviews vertically */
+    gap: 20px;
+}
+
+/* Single Review Card Design */
+.review-card {
+    background: #111;
+    padding: 25px;
+    border-left: 4px solid #D4AF37; /* Golden bar on the left */
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.review-card:hover { background: #1a1a1a; transform: translateX(10px); }
+.quote { font-style: italic; color: #ccc; margin-bottom: 15px; }
+.reviewer-info { display: flex; justify-content: space-between; align-items: center; }
+.stars { color: #D4AF37; font-size: 12px; }
+
+/* Feedback Form Section (Right Side) */
+.submit-feedback-box {
+    flex: 1;
+    background: #0a0a0a;
+    padding: 40px;
+    border-radius: 10px;
+    border: 1px solid #222;
+    min-width: 350px;
+}
+.submit-feedback-box h2 { margin-bottom: 10px; font-family: 'Playfair Display', serif; }
+.submit-feedback-box p { color: #666; margin-bottom: 30px; font-size: 14px; }
+
+/* Form Field Styling */
+.feedback-form { display: flex; flex-direction: column; gap: 15px; }
+.feedback-form input, .feedback-form select, .feedback-form textarea {
+    width: 100%;
+    padding: 12px;
+    background: #151515;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
+}
+.feedback-form input:focus, .feedback-form textarea:focus { border-color: #D4AF37; outline: none; }
+
+/* Post Button */
+.submit-btn {
+    background: #D4AF37;
+    color: black;
+    padding: 15px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.4s;
+}
+.submit-btn:hover { background: white; }
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1000px) {
+    .feedback-container { flex-direction: column; }
+}
